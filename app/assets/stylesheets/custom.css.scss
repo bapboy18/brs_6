@@ -50,7 +50,6 @@ textarea {
 }
 
 .center {
-  text-align: center;
 }
 
 .center h1 {
@@ -243,5 +242,13 @@ aside {
 }
 
 .btn {
+  width: 200px;
+}
+
+.sidebar-a {
+  display: inline;
+  float: left;
+  margin-top: 5px;
+  position: relative;
   width: 200px;
 }

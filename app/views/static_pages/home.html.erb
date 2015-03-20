@@ -1,0 +1,15 @@
+<div class="center jumbotron">
+  <div class="sidebar-a">
+    <ul class="nav navbar-nav navbar-right">
+      <% @categories.each do |cat| %>
+        <li><%= link_to "Cat", "#" %></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <h1>Welcome to Book System</h1>
+  <h2>
+    This is the home page for the <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a> 
+    sample application.
+  </h2>
+</div>
