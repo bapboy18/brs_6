@@ -1,0 +1,29 @@
+<% provide(:title, "Add new book") %>
+<h1>Add new book</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for [:admin, @book] do |f| %>
+
+      <%= f.label :title %>
+      <%= f.text_field :title, class: "form-control" %>
+
+      <%= f.label :author %>
+      <%= f.text_field :author, class: "form-control" %>
+
+      <%= f.label :number_pages %>
+      <%= f.text_field :number_pages, class: "form-control" %>
+
+      <%= f.label "Category" %><br/> 
+      <%= f.collection_select(:category_id, Category.all, :id, :cat_name) %>
+
+      <%= f.fields_for :images do |builder| %>
+        <%= render "image_fields", f: builder %>
+      <% end %>
+     
+      <p class="button_image">
+        <%= link_to_add_field "Add more image", f, :images %>
+      </p>
+      <%= f.submit "Add new book", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
