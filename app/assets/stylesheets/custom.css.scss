@@ -11,7 +11,14 @@ $gray-medium-light: #eaeaea;
   box-sizing:         border-box;
 }
 
+.fields {
+  margin-top: 10px;
+}
 
+.fields input {
+  width: 350px;
+  margin-right: 30px;
+}
 
 .debug_dump {
   clear: both;
@@ -251,4 +258,16 @@ aside {
   margin-top: 5px;
   position: relative;
   width: 200px;
+}
+
+.button_image {
+  -webkit-appearance: button;
+  cursor: pointer;
+  width: 150px;
+  padding: 2px;
+  text-align: center;
+}
+.button_image a,
+.button_image a:hover{
+  text-decoration: none;
 }
