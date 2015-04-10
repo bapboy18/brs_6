@@ -15,7 +15,7 @@
       <%= f.text_field :number_pages, class: "form-control" %>
 
       <%= f.label "Category" %><br/> 
-      <%= f.collection_select(:category_id, Category.all, :id, :cat_name) %>
+      <%= f.collection_select(:category_id, Category.all, :id, :name) %>
 
       <%= f.fields_for :images do |builder| %>
         <%= render "image_fields", f: builder %>
