@@ -1,1 +1,31 @@
-<h1></h1>
+<% provide(:title, "Administrator") %>
+
+<div class="icon-wrapper">
+  <div class="icon">
+    <%= link_to new_admin_book_path do %> 
+      <p><%= image_tag "item-new.png" %></p>
+      <span>Add new book</span>
+    <% end %>
+    </a>
+  </div>
+</div>
+
+<div class="icon-wrapper">
+  <div class="icon">
+    <%= link_to admin_books_path do %> 
+      <p><%= image_tag "items.png" %></p>
+      <span>Book list</span>
+    <% end %>
+    </a>
+  </div>
+</div>
+
+<div class="icon-wrapper">
+  <div class="icon">
+    <%= link_to admin_categories_path do %> 
+      <p><%= image_tag "categories.png" %></p>
+      <span>Categories</span>
+    <% end %>
+    </a>
+  </div>
+</div>
