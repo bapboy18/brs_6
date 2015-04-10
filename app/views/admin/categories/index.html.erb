@@ -1,0 +1,22 @@
+<% provide(:title, "All categories") %>
+<h1>All Categories</h1>
+
+<div>
+  <%= link_to "New category", new_admin_category_path, class: "btn btn-lg btn-primary" %>
+</div>
+<br>
+
+<div class="table-responsive">
+  <table class="table">  
+    <thead>
+      <td>Category Name</td>
+      <td></td>
+    </thead>
+    <% @categories.each do |category| %>
+      <tr>
+        <td><%= category.name %></td>
+        <td><%= link_to "edit", edit_admin_category_path(category.id) %></td>
+      </tr>  
+    <% end %>
+  </table>  
+</div>
