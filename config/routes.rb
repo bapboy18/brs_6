@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :books
 
   namespace :admin do 
-    resources :books
+    root 'static_pages#home'
+    resources :books, :categories
   end
 end

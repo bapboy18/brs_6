@@ -3,6 +3,7 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for [:admin, @book] do |f| %>
+      <%= render 'shared/error_messages', obj: @book %>
 
       <%= f.label :title %>
       <%= f.text_field :title, class: "form-control" %>
@@ -21,7 +22,7 @@
       <% end %>
      
       <p class="button_image">
-        <%= link_to_add_field "Add more image", f, :images %>
+        <%= link_to_add_field "Add image", f, :images %>
       </p>
       <%= f.submit "Add new book", class: "btn btn-primary" %>
     <% end %>
