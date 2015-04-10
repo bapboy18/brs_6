@@ -1,8 +1,21 @@
 <% provide(:title, @book.title) %>
 
-<h1>
-  <%= @book.title %>
-</h1>
 <div>
-  <%= @book.author %>
+  <div class="img-canvas">
+    <%= image_tag @book.images.first.description %>
+    <div class="sub-image">
+      <% @book.images.each do |sub_image| %>
+         <%= image_tag sub_image.description %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="book-intro">
+    <h2><%= @book.title %></h2>
+    <div>
+      <p>Author: <%= @book.author %></p>
+      <p>Page number: <%= @book.number_pages %></p>
+      <p>Category: <%= @book.category.name %></p>
+    </div>
+  </div>
 </div>
