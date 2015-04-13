@@ -1,5 +1,6 @@
 class Book < ActiveRecord::Base
   has_many :images, dependent: :destroy
+  has_many :reviews, dependent: :destroy
   belongs_to :category
   
   validates :title, :author, :category_id, presence: true

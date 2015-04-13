@@ -1,6 +1,6 @@
 <% provide(:title, @book.title) %>
 
-<div>
+<div class="product-box">
   <div class="img-canvas">
     <%= image_tag @book.images.first.description %>
     <div class="sub-image">
@@ -18,4 +18,16 @@
       <p>Category: <%= @book.category.name %></p>
     </div>
   </div>
+</div>
+
+<div class="reviews">
+  <h4 id="reviews-count">This book has <%= pluralize(@book.reviews.count, 'review') %></h4>
+
+  <div id="review-form">
+    <%= render 'reviews/review_form' %>
+  </div>
+</div>
+
+<div id="reviews-list">
+  <%= render partial: @book.reload.reviews %>
 </div>
