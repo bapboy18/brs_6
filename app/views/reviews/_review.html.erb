@@ -1,0 +1,8 @@
+<%= div_for review do %>
+  <span class="date">
+    <small><%= time_ago_in_words(review.created_at) %> ago</small>
+  </span>
+
+  <p class="review-content"><%= sanitize(review.content) %></p>
+  <hr />
+<% end %>

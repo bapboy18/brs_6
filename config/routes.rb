@@ -6,7 +6,9 @@ Rails.application.routes.draw do
 
   devise_for :users
   
-  resources :books
+  resources :books do
+    resources :reviews
+  end
 
   namespace :admin do 
     root 'static_pages#home'

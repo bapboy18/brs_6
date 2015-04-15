@@ -1,0 +1,30 @@
+.reviews {
+  padding: 10px 10px 0px 10px;
+  min-height: 180px;
+}
+
+.review-author {
+  margin-bottom: 0px;
+}
+
+.review-content {
+  padding: 5px 0px;
+}
+
+.you {
+  font-style: italic;
+}
+
+.last-review {
+  border-radius: 5px;
+}
+
+.form-group textarea{
+  height: 100px !important;
+  width: 800px;
+  float: left;
+}
+
+#review-form input {
+  margin: 25px 25px 45px 25px;
+}

@@ -1,0 +1,10 @@
+<%= form_for [@book, @book.reviews.new], remote: true do |f| %>
+
+  <div class="form-group">
+    <%= f.text_area :content, placeholder: 'What do you think?' %>
+  </div>
+
+  <%= f.submit 'Post your review', class: 'btn btn-primary' %>
+
+  <div class="review-error"></div>
+<% end %>
