@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     resources :reviews
   end
 
+  resources :favorites, only: [:create, :destroy]
+
   namespace :admin do 
     root 'static_pages#home'
     resources :books, :categories
