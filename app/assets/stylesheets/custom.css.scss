@@ -282,3 +282,17 @@ aside {
 .button_image a:hover{
   text-decoration: none;
 }
+
+.carousel-inner{
+
+  width: 800px ;
+  max-height: 400px ;
+}
+
+@media only screen and (min-width : 800px) {
+  .carousel-caption
+  {
+    top: 150px;
+    color: white;
+  }
+}
