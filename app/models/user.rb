@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   has_many :favorites
 
   def has_favorite? book
-    favorites.find_by_book_id book.id
+    favorites.map(&:book).include? book
   end
 
   def make_favorite book
